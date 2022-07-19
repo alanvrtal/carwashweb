@@ -37,19 +37,17 @@ export const MainPage = () => {
             </p>
         </div>
         <nav className={`nav__menu ${showMenu ? "show-menu" : ""}`} >
-            <li className="nav__options">
-                <h2 className="nav__menu-logo-name">
-                    Car<span>Washing</span> 
-                </h2>
-                <a href="" className="nav__link">Inicio</a>
-                <a href="" className="nav__link">Nosotros</a>
-                <a href="" className="nav__link">Servicios</a>
-                <a href="" className="nav__link">Galeria</a>
-                <a href="" className="nav__link">Productos</a>
-                <a href="" className="nav__link">Contacto</a>
                 <div onClick={handleMenu} className={`nav__close ${showMenu ? 'show-menu' : ""}`} id="nav-close">
                         <i className='bx bx-x'></i>
                     </div>
+            <li className="nav__options">
+                <h2 className="nav__menu-name">
+                    Car<span>Washing</span> 
+                </h2>
+                <a onClick={handleMenu}  href="#home" className="nav__link">Inicio</a>
+                <a onClick={handleMenu}  href="#service" className="nav__link">Servicios</a>
+                <a onClick={handleMenu}  href="#about" className="nav__link">Nosotros</a>
+                <a  onClick={handleMenu} href="#contact" className="nav__link">Contacto</a>
             </li>
         </nav>
         <div onClick={handleToggle} className="nav__toggle">
@@ -60,30 +58,32 @@ export const MainPage = () => {
     
     {/* HOME */}
 
-    <div className="home">
+    <section className="home" id='home'>
     <Swiper
         spaceBetween={0}
         navigation={true}
         thumbs={{ swiper: thumbsSwiper }}
         modules={[FreeMode, Navigation, Thumbs]}
         className="swiper"
-        style={{"--swiper-navigation-color": "#FFF", "--swiper-pagination-color": "#FFF"}}
+        style={{"--swiper-navigation-color": "#FFF", 
+        "--swiper-pagination-color": "#FFF",
+        "--swiper-navigation-size": "15px"}}
 
       > 
       <SwiperSlide className='swiper-arrow'>
-        <img src="https://i.imgur.com/VczgCI4.png" alt="Auto1" className="home__img" />
+        <img src="https://i.imgur.com/nYGxmKX.jpg" alt="Auto1" className="home__img" />
       </SwiperSlide>
       <SwiperSlide className='swiper-arrow'>
-        <img src="https://i.imgur.com/GjwJZnH.png" alt="Auto2" className="home__img" />
+        <img src="https://i.imgur.com/DtXJUAp.jpg" alt="Auto2" className="home__img" />
       </SwiperSlide>
       <SwiperSlide className='swiper-arrow'>
-        <img src="https://i.imgur.com/0ewU3lF.png" alt="Auto3" className="home__img" />
+        <img src="https://i.imgur.com/9n9QmA3.jpg" alt="Auto3" className="home__img" />
       </SwiperSlide>
       </Swiper>
-        </div>
+        </section>
 
     {/* SERVICE */}
-    <div className="service container">
+    <section className="service container" id='service'>
         <h1 className="service__title">
             MOST TRUSTED FULL SERVICE CAR WASH
         </h1>
@@ -101,7 +101,7 @@ export const MainPage = () => {
                 <div className="service__card-content">
                 <i className='bx bxs-certification'></i>
                     <p className="service__card-text">
-                    Car Wash Clear Coat Whell bRIGHT DGASGASDG ADFSGASG
+                    Car Wash <br /> Clear Coat <br /> Whell bRIGHT <br />DGASGASDG <br /> ADFSGASG
                     </p>
                 </div>
             </div>
@@ -113,7 +113,7 @@ export const MainPage = () => {
                 <div className="service__card-content">
                 <i className='bx bxs-certification'></i>
                     <p className="service__card-text">
-                    Car Wash Clear Coat Whell bRIGHT DGASGASDG ADFSGASG
+                    Car Wash <br /> Clear Coat <br /> Whell bRIGHT <br />DGASGASDG <br /> ADFSGASG
                     </p>
                 </div>
             </div>
@@ -125,7 +125,7 @@ export const MainPage = () => {
                 <div className="service__card-content">
                 <i className='bx bxs-certification'></i>
                     <p className="service__card-text">
-                    Car Wash Clear Coat Whell bRIGHT DGASGASDG ADFSGASG
+                    Car Wash <br /> Clear Coat <br /> Whell bRIGHT <br />DGASGASDG <br /> ADFSGASG
                     </p>
                 </div>
             </div>
@@ -137,15 +137,15 @@ export const MainPage = () => {
                 <div className="service__card-content">
                     <i className='bx bxs-certification'></i>
                     <p className="service__card-text">
-                    Car Wash Clear Coat Whell bRIGHT DGASGASDG ADFSGASG
+                    Car Wash <br /> Clear Coat <br /> Whell bRIGHT <br />DGASGASDG <br /> ADFSGASG
                     </p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     {/* ABOUT */}
-    <div className="about container">
+    <section className="about container" id='about'>
         <div className="about__container">
             
             {/* Welcome */}
@@ -218,41 +218,38 @@ export const MainPage = () => {
             </div>
         </div>
         <img src="https://i.imgur.com/IOxgwZn.png" alt="Auto mitad limpio mitad sucio" className="about__img" />
-    </div>
+    </section>
 
     {/* FOOTER */}
 
     
-    <footer className="footer">
+    <footer className="footer" id='contact'>
         
         <div className="footer__content container">
         
-        <div className="footer__box">
-            <h2 className="nav__logo-name">
-                Car<span>Washing</span> 
-            </h2>
-            <p className="footer__slogan">Deja tu auto limpito</p>
+            <div className="footer__box">
+                <h2 className="footer__logo-name">
+                    Car<span>Washing</span> 
+                </h2>
+                <p className="footer__slogan">Deja tu auto limpito</p>
+            </div>
+                <div className="footer__box">
+                    <h4 className="footer__subtitle">Call Us</h4>
+                    <p className="footer__text">1-800-123-4567</p>
+                </div>
+
+                <div className="footer__box">
+                    <h4 className="footer__subtitle">Location</h4>
+                    <p className="footer__text">901 Marmora Road, Glasgow, D1401</p>
+                </div>
+
+                <div className="footer__box">
+                    <h4 className="footer__subtitle">Email</h4>
+                    <p className="footer__text">carwashing@gmail.com</p>
+                </div>
+
         </div>
-            <div className="footer__box">
-                <h4 className="footer__subtitle">Call Us</h4>
-                <p className="footer__text">1-800-123-4567</p>
-            </div>
-
-            <div className="footer__box">
-                <h4 className="footer__subtitle">Location</h4>
-                <p className="footer__text">901 Marmora Road, Glasgow, D1401</p>
-            </div>
-
-            <div className="footer__box">
-                <h4 className="footer__subtitle">Email</h4>
-                <p className="footer__text">carwashing@gmail.com</p>
-            </div>
-
-        </div>
-    </footer>
-
-        <div className="footer__lastline container">
-            
+        <div className="footer__contact">
             <div className="footer__powered">&#169; 2022 - Powered by Alan Vrtal</div>
 
             <div className="footer__social">
@@ -261,6 +258,8 @@ export const MainPage = () => {
                 <a href="#" className="footer__link"><i className='bx bxl-whatsapp-square'></i></a>
             </div>
         </div>
+    </footer>
+
 
 </> 
 )}
