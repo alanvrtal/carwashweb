@@ -19,6 +19,7 @@
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -561,7 +562,7 @@ i {
         flex-grow: 1 ;
     }
     .about__whyus {
-        flex-shrink: 4;
+        flex-grow: 1;
     }
     .about__services {
         flex-grow: 1;
